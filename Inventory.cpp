@@ -64,7 +64,6 @@ bool Inventory::removeItem(const std::string& name){
         else{
             remove(stuff);
         }
-        delete stuff;
         return true;
     }
     delete stuff;
@@ -202,7 +201,7 @@ void Inventory::printInventory(bool ascendTrue, const std::string& criteria){
         }
     }
 }
-void Inventory::vectorStorage(std::shared_ptr<BinaryNode<Item *>> node, std::vector<Item *> &items){
+void Inventory::vectorStorage(std::shared_ptr<BinaryNode<Item*>> node, std::vector<Item *> &items){
     if (node != nullptr){
         vectorStorage(node->getLeftChildPtr(), items);
         items.push_back(node->getItem());

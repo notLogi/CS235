@@ -122,6 +122,5 @@ private:
     int gold_value_;
     int quantity_;
     time_t time_picked_up_;
-    
 };
 #endif // ITEM_HPP
